@@ -1,13 +1,15 @@
 <script setup>
-import { RouterView } from "vue-router"
+import { RouterView, RouterLink } from "vue-router"
+
 </script>
 
 <template>
   <main>
     <div class="links">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
+      <RouterLink active-class="active" to="/">Home</RouterLink>
+      <RouterLink active-class="active" to="/about">About</RouterLink>
     </div>
+   
     <RouterView />
   </main>
 </template>
@@ -19,5 +21,9 @@ import { RouterView } from "vue-router"
 }
 .links a {
   margin: 0 5px
+}
+.active {
+  font-weight: bold;
+  color: green
 }
 </style>
