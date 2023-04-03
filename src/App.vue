@@ -1,12 +1,23 @@
 <script setup>
-import carsData from "./data.json";
-import { ref } from "vue";
-
-const cars = ref(carsData);
+import { RouterView } from "vue-router"
 </script>
 
 <template>
-  <main></main>
+  <main>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </div>
+    <RouterView />
+  </main>
 </template>
 
-<style scoped></style>
+
+<style scoped>
+.links {
+  padding: 20px
+}
+.links a {
+  margin: 0 5px
+}
+</style>
