@@ -61,5 +61,26 @@
         "body": "coupe",
         "price": 45323,
         "year": 2020
+    },
+    {
+        "id": 11,
+        "make": "Audi",
+        "body": "coupe",
+        "price": 7123,
+        "year": 2020
+    },
+    {
+        "id": 12,
+        "make": "Chevrolet",
+        "body": "coupe",
+        "price": 55323,
+        "year": 2020
+    },
+    {
+        "id": 13,
+        "make": "Porsche",
+        "body": "coupe",
+        "price": 453233,
+        "year": 2020
     }
 ]

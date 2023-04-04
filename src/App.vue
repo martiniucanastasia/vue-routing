@@ -9,7 +9,6 @@ import { RouterView, RouterLink } from "vue-router"
       <RouterLink active-class="active" to="/">Home</RouterLink>
       <RouterLink active-class="active" to="/about">About</RouterLink>
     </div>
-   
     <RouterView />
   </main>
 </template>
@@ -17,13 +16,19 @@ import { RouterView, RouterLink } from "vue-router"
 
 <style scoped>
 .links {
-  padding: 20px
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  padding: 20px 0;
+  gap: 20px;
 }
+
 .links a {
-  margin: 0 5px
+  text-decoration: none;
+  color: #3E54AC;
 }
+
 .active {
   font-weight: bold;
-  color: green
 }
 </style>
