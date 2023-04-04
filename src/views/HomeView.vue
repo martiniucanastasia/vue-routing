@@ -43,6 +43,7 @@ const handleChange = () => {
         <h1>{{ car.make }}</h1>
         <p>${{ car.price }}</p>
       </div>
+ 
     </div>
   </main>
 </template>
