@@ -30,9 +30,8 @@ const handleChange = () => {
 
 <template>
   <main class="container">
-
     <h1>Our cars</h1>
-    <select @change="handleChange" v-model="make">
+    <select @change="handleChange" v-model="make" class="select">
       <option value="All">All</option>
       <option value="Chevrolet">Chevrolet</option>
       <option value="Porsche">Porsche</option>
@@ -40,7 +39,7 @@ const handleChange = () => {
     </select>
     <div class="cards">
       <div v-for="car in cars" :key="car.id" class="card" @click="() => router.push(`/car/${car.id}`)">
-        <h1>{{ car.make }}</h1>
+        <h2>{{ car.make }}</h2>
         <p>${{ car.price }}</p>
       </div>
  
@@ -49,21 +48,53 @@ const handleChange = () => {
 </template>
 
 <style scoped>
+h1 {
+  color: #3E54AC;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.select{
+ border: 2px solid #BFACE2;
+ border-radius: 6px;
+
+ font-weight: 700;
+ color: #3E54AC;
+
+ margin-bottom: 40px;
+ padding: 10px;
+
+ box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+
+ cursor: pointer;
+}
 .cards {
   display: flex;
-  width: 1000px;
   flex-wrap: wrap;
-  margin-top: 50px;
   justify-content: center;
+
+  gap: 20px;
 }
 
 .card {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.207);
-  padding: 15px;
+  padding: 20px;
   width: 150px;
-  margin-right: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  background-color: #655DBB;
+  border-radius: 6px;
   cursor: pointer;
-  margin-bottom: 20px;
-  background-color: purple;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
 }
 </style>
